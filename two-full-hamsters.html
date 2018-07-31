@@ -13,17 +13,23 @@
         let hamster = {
             stomach: [],
             eat(food) {
-                this.stomach.push(food)
+                this.stomach = [food]
             }
         }
 
         let speedy = {
-            __proto__: hamster
+            __proto__: hamster,
+            // stomach: []
         }
 
         let lazy = {
-            __proto__: hamster
+            __proto__: hamster,
+            // stomach: []
         }
+
+        speedy.eat("pizza")
+        alert(speedy.stomach) // pizza
+        alert(lazy.stomach) // nothing
     </script>
 </body>
 
