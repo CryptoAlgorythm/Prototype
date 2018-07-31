@@ -11,14 +11,27 @@
 <body>
     <script>
         let animal = {
-            eats: true
+            eats: true,
+            walk() {
+                alert("Animal walk")
+            }
         }
 
         let rabbit = {
-            jumps: true
+            jumps: true,
+            __proto__: animal
         }
 
-        rabbit.__proto__ = animal;
+        let longEar = {
+            earLength: 10,
+            __proto__: rabbit
+        }
+        longEar.walk();
+        alert(longEar.jumps)
+        rabbit.walk = function () {
+            alert("Rabbit! Bounce-bounce")
+        }
+        rabbit.walk()
     </script>
 </body>
 
