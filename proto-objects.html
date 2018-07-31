@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let animal = {
+            jumps: null
+        }
+        let rabbit = {
+            __proto__: animal,
+            jumps: true,
+            test: `something is here`
+        }
+
+        alert(rabbit.jumps) // true; taken from rabit
+        delete rabbit.jumps
+        alert(rabbit.jumps) // null; taken from animal
+        delete animal.jumps
+        alert(rabbit.jumps) // undefined; there's no such property anymore
+    </script>
+</body>
+
+</html>
