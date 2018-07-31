@@ -10,7 +10,15 @@
 
 <body>
     <script>
-        console.log('hello world');
+        let animal = {
+            eats: true
+        }
+
+        let rabbit = {
+            jumps: true
+        }
+
+        rabbit.__proto__ = animal;
     </script>
 </body>
 
